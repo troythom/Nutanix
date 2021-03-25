@@ -14,6 +14,7 @@ Clone MSSQL Database to a new VM managed by Nutanix Era
 To use this blueprint, import into a Prism Central runnin Calm 3.0 or later, modify the variables and credentials as mentioned below.
 
 
+
 *****NEEDS UPDATED DOCUMENTATION*****
 
  Nutanix Era Environment Configuration - Assumes Nutanix Era is configured and DB Server VMs
