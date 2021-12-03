@@ -1,4 +1,5 @@
 #Create a New VM on Connected Cluster
+#Utilize Nutanix Cmdlets v2.0
 #Assumes user has already connected to the proper Prism Central Instance using Connect-PrismCentral
 
 #Created by Troy Thompson

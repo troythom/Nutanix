@@ -1,4 +1,5 @@
 #Connect to Prism Central
+#Utilize Nutanix Cmdlets v2.0
 
 #Prompt for Environment Inputs
 $PC = Read-Host -Prompt 'Input FQDN or IP Address of the target Prism Central Instance'
