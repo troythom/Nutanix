@@ -6,7 +6,7 @@
 #troy.thompson@nutanix.com
 #Created - 03-December-2021
 
-clear
+Clear-Host
 
 #Prompt for VM Details
 $Name = Read-Host -Prompt 'Input New VM Name'
@@ -28,12 +28,12 @@ $Integer = [int]$Mem
 $MemMB = $Integer*1024
 
 #Print Out List of Clusters and Prompt for Cluster Name
-clear
+Clear-Host
 $Clusters | ForEach-Object -Process {Write-Host $_.ClusterName}
 $DeployTo = Read-Host -Prompt "Copy the Desired Cluster Name and input"
 
 #Print Out List of Images and Prompt for UUID
-clear
+Clear-Host
 $Images | ForEach-Object -Process {Write-Host $_.uuid $_.name}
 $ImageUUID = Read-Host -Prompt "Copy the UUID of the desired image and input"
 
@@ -56,7 +56,7 @@ $vmDisk.vm_disk_clone=$vmDiskClone
 
 
 #Print Out List of Networks and Prompt for UUID
-clear
+Clear-Host
 $Networks | ForEach-Object -Process {Write-Host $_.UUID $_.vlan_id $_.name}
 $Net = Read-Host -Prompt "Copy the UUID of the desired network and input"
 
@@ -66,12 +66,12 @@ $nic.network_uuid = $Net
 $nic.is_connected = $true
 
 #Create the VM
-clear
+Clear-Host
 New-VM -ClusterName $DeployTo -Name $Name -NumVcpus $vCPU -Description $Desc -MemoryMb $MemMB -VMDisks $vmDisk -VmNics $nic | Wait-Task
 
 #Find the VM ID and Power On
 
-$vm = Get-VM | where {$_.vmName -eq $Name}
+$vm = Get-VM | Where-Object {$_.vmName -eq $Name}
 $vmID = $vm.uuid 
 
 Start-VM $vmID | Wait-Task
