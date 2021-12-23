@@ -81,6 +81,9 @@ $vmID = $vm.uuid
 
 Start-VM $vmID | Wait-Task
 
+Disconnect-PrismCentral -Servers *
+
+
 
 
 
