@@ -47,13 +47,13 @@ $Metrics = foreach ($temp in $ContanierResponse) {
 
 # Working in Progress export to CSV or TXT File
 
-$fileToCheck = "c:\TEMP\metrics.txt"
+$fileToCheck = "c:\TEMP\metrics.csv"
         if (Test-Path $fileToCheck -PathType leaf)
         {
             Remove-Item $fileToCheck
         }
 
-$Metrics | Out-String | Set-Content c:\TEMP\metrics.txt
+Export-Csv -InputObject $Metrics -Path c:\TEMP\metrics.csv  
 
 
 #Invoke-Item c:\TEMP\metrics.csv
