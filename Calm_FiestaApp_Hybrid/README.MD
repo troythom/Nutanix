@@ -1,6 +1,6 @@
-Creation of a application utilizing a MySQL DB and Webapp with Nodereact and NGINX.  This is a simple application developed by Nutanix to show what is possible.
+Creation of an application utilizing a MySQL DB and Webapp with Nodereact and NGINX.  This is a simple application developed by Nutanix to show what is possible.
 
-Assumption:  You have configured and verified Nutanix Calm accounts for AHV and Azure.  Nutanix Calm project(s) have been created along with proper credentials.
+Assumption:  You have configured and verified Nutanix Calm accounts for AHV and Azure.  Nutanix Calm project(s) have been created along with proper credentials.  An Azure Compute Gallery Image with CentOS 7.9 is available
 
  This Calm blueprint creates two VMs and installs/configures the application software to each.
  
@@ -13,16 +13,12 @@ Assumption:  You have configured and verified Nutanix Calm accounts for AHV and 
     Nutanix AOS 6.0.4
     Prism Central pc.2021.9.0.3 
     Nutanix Calm 3.3.1
-    An Azure Compute Gallery Image with CentOS 7.9 is available - You can choose a marketplace image if you wish to do so.
+    An Azure Compute Gallery Image with CentOS 7.9 is used - You can choose a marketplace image if you wish to do so.
 
-To use this blueprint, import into a Prism Central runnin Calm 3.0 or later, modify the variables and credentials as mentioned below.
+To use this blueprint, import into a Prism Central running Calm 3.0 or later, modify the variables and credentials as mentioned below.
 
-
-
-*****NEEDS UPDATED DOCUMENTATION*****
-
- Enviornmnet Variables - Availble across all three environments  
-        db_username - Defaulted root
+    Enviornmnet Variables - Availble across all three environments  
+        db_username - Defaulted to root
         db_domain_name - Blank and not required - In place if needed and for future MSSQL
         db_dialect - Defaulted to mysql - No need to change this - In place for future MSSQL
         db_name - Defaulted fiestadb - Used in the sample application - Can change but will need to modify db setup scripts
