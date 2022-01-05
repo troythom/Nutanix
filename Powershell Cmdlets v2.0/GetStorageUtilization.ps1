@@ -1,5 +1,5 @@
 #Retrieve Container Utilization Statistics (Derive "Allocated" Space)
-#Utilize Nutanix Cmdlets v2.0 and Rest API v2.0
+#Utilize Nutanix Cmdlets v2.0 and Rest API v3.0 (Prism Central) and v2.0 (Prism Element)
 
 #Created by Troy Thompson
 #troy.thompson@nutanix.com
